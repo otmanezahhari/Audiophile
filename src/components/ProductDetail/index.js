@@ -132,7 +132,7 @@ function ProductDetail(props){
                         </div>
                         <div className="description-product">
                           <div className="title">{elem.name}</div>
-                          <Link to={`/${elem.slug}`} className="btn link-see-product" onClick = {() => props.display(elem.slug) }>See product</Link>
+                          <Link to={`/product-detail/${elem.slug}`} className="btn link-see-product" onClick = {() => props.display(elem.slug) }>See product</Link>
                         </div>
                         
                       </div>
