@@ -223,7 +223,7 @@ export function Hero(props){
         <p className="p">
           Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.
         </p>
-        <Link to={"product-detail/xx99-mark-two-headphones"} className="btn brown" onClick = {()=>props.display("xx99-mark-two-headphones")}>see product</Link>
+        <Link to={"/product-detail/xx99-mark-two-headphones"} className="btn brown" onClick = {()=>props.display("xx99-mark-two-headphones")}>see product</Link>
 
       </div>
     </div>
@@ -244,7 +244,7 @@ export function PremiumSpeaker(props){
             <p className=" p description-premium-speaker">
               Upgrade to premium speakers that are phenomenally built to deliver truly remarkable sound.
             </p>
-            <Link to = "product-detail/zx9-speaker" className='btn black ' onClick = {()=>props.display("xx99-mark-two-headphones")} >See product</Link>
+            <Link to = "/product-detail/zx9-speaker" className='btn black ' onClick = {()=>props.display("xx99-mark-two-headphones")} >See product</Link>
           </div>
           <div className="box-pattern">
             <img src={"/Audiophile/assets/home/desktop/pattern-circles.svg"} alt="patern circle" />
@@ -263,7 +263,7 @@ export function Speaker(props){
 
           <div className="information-speaker">
             <h3 className="h3 heading-speaker">ZX7 speaker</h3>
-            <Link to = "product-detail/zx9-speaker" className='btn transparent' onClick = {()=>props.display("xx99-mark-two-headphones")}>See product</Link>        
+            <Link to = "/product-detail/zx9-speaker" className='btn transparent' onClick = {()=>props.display("xx99-mark-two-headphones")}>See product</Link>        
           </div>
 
       </div>
@@ -282,7 +282,7 @@ export function EarphonesHome(props){
         <div className="description-earning-proudct center">
             <div className="box-center">
               <h1 className="h3 title">yx1 earphones</h1>
-              <Link to = "product-detail/yx1-earphones" className='btn transparent' onClick = {()=>props.display("xx99-mark-two-headphones")}>See product</Link>
+              <Link to = "/product-detail/yx1-earphones" className='btn transparent' onClick = {()=>props.display("xx99-mark-two-headphones")}>See product</Link>
             </div>
         </div>
       </div>
