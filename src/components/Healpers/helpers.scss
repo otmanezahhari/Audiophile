@@ -1,0 +1,619 @@
+@import "../../styles/variables";
+
+/*----------- Navabr Style --------------*/
+nav {
+  background-color: $black;
+  .navigation {
+    padding: 32px 0;
+    position: relative;
+    z-index: 30;
+    border-bottom: 1px solid $gray-01;
+    @media (max-width: 1110px) {
+      padding: 32px 32px;
+    }
+    @media (max-width: 769px) {
+      padding: 32px 0px;
+    }
+
+    .home-page-icon {
+      .humburg-nav {
+        display: none;
+        margin-right: 42px;
+        cursor: pointer;
+        @media (max-width: 769px) {
+          display: block;
+        }
+        @media (max-width: 368px) {
+          margin-right: 68px;
+        }
+      }
+    }
+
+    #navbar {
+      width: 429px;
+      @media (max-width: 769px) {
+        display: none;
+      }
+      .link {
+        color: $white;
+        text-transform: uppercase;
+        &:hover {
+          color: $brown;
+        }
+      }
+    }
+
+    #nav-mobile {
+      position: fixed;
+      height: 340px;
+      width: 100%;
+      max-width: 768px;
+      background-color: $white-01;
+      left: 0;
+      top: 90px;
+      display: none;
+      &.display {
+        display: block;
+      }
+      .categorie-items {
+        margin: 56px auto;
+      }
+    }
+    .chart {
+      cursor: pointer;
+    }
+  }
+}
+
+/*------------- Hero -------------*/
+.hero {
+  height: calc(100% - 96px);
+  @media (max-width: 769px) {
+    position: relative;
+  }
+  .description {
+    width: 398px;
+    @media (max-width: 769px) {
+      width: 379px;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    span {
+      &.overline {
+        color: $gray-01;
+        text-transform: uppercase;
+      }
+    }
+
+    .h1 {
+      text-transform: uppercase;
+      color: $white-01;
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+
+    .p {
+      color: $gray-01;
+      width: 349px;
+      margin-bottom: 40px;
+      @media (max-width: 368px) {
+        width: 328px;
+        margin: auto;
+      }
+    }
+  }
+}
+
+/*----------------Heading Category Drop Down -----------*/
+
+.heading-drop-dow-active {
+  height: 240px;
+  background-color: $black;
+  color: $white;
+  justify-content: center;
+}
+
+/*------------ Product Componenet Category ------------*/
+
+.product-component {
+  .content-product {
+    &:last-of-type {
+      margin: 160px auto 0;
+      @media (max-width: 769px) {
+        margin: 120px auto 0;
+      }
+    }
+    .image-product-box {
+      flex: 0 0 50%;
+      width: 50%;
+      max-width: 540px;
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 689px;
+        height: 352px;
+        margin-bottom: 52px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .description-product {
+      flex: 0 0 50%;
+      width: 50%;
+      max-width: 445px;
+      &.order {
+        order: -1;
+        @media (max-width: 769px) {
+          order: 1;
+        }
+      }
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 572px;
+        text-align: center;
+        margin: auto;
+        height: 352px;
+      }
+
+      .new-product {
+        text-transform: uppercase;
+        color: $brown;
+        margin-bottom: 16px;
+        @media (max-width: 769px) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .title-product {
+        text-transform: uppercase;
+        margin-bottom: 32px;
+        width: 300px;
+        @media (max-width: 769px) {
+          margin: 0 auto 32px;
+        }
+      }
+
+      .short-description {
+        color: $gray-01;
+        margin-bottom: 40px;
+        @media (max-width: 769px) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}
+
+/*--------------------- About Component -------------------*/
+
+#about-us {
+  .about-us-box {
+    height: 588px;
+    margin-bottom: 200px;
+    @media (max-width: 769px) {
+      height: 633px;
+    }
+    .box-description-about-us {
+      flex: 0 0 50%;
+      width: 50%;
+      max-width: 445px;
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        max-width: 573px;
+        text-align: center;
+        margin: auto;
+      }
+      .about-us-heading {
+        text-transform: uppercase;
+        margin-bottom: 32px;
+        span {
+          color: $brown;
+        }
+      }
+      .about-us-description {
+        color: $gray-01;
+      }
+    }
+
+    .box-img-about-us {
+      flex: 0 0 50%;
+      width: 50%;
+      max-width: 540px;
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        height: 300px;
+        max-width: 100%;
+        order: -1;
+        margin-bottom: 63px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+/*--------------- Categories -----------------*/
+#categories {
+  .categorie-items {
+    height: 284px;
+    margin: 120px auto;
+    @media (max-width: 769px) {
+      height: 217px;
+      margin: 96px auto;
+    }
+    @media (max-width: 368px) {
+      height: auto;
+      margin: 82px auto 0;
+    }
+    .categorie-item {
+      text-align: center;
+      flex: 1 1 32%;
+      width: 32%;
+      max-width: 350px;
+      position: relative;
+      background-color: $gray;
+      @media (max-width: 1110px) {
+        max-width: 300px;
+      }
+      @media (max-width: 995px) {
+        max-width: 270px;
+      }
+      @media (max-width: 895px) {
+        max-width: 220px;
+      }
+      @media (max-width: 769px) {
+        width: 200px;
+      }
+      @media (max-width: 368px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 327px;
+        height: 217px;
+        margin: 0 auto 82px;
+      }
+
+      .box-img-categorie {
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        height: 160px;
+
+        &.headphones {
+          top: -62px;
+        }
+        &.speakers {
+          top: -50px;
+        }
+
+        &.earphones {
+          top: -28px;
+        }
+      }
+
+      .description-categorie {
+        padding: 90px 0 20px;
+        position: relative;
+        z-index: 10;
+        cursor: pointer;
+        .link-categorie {
+          justify-content: center;
+          margin: 8px auto 0;
+          width: 58px;
+          .shop {
+            color: $gray-01;
+          }
+          img {
+            margin-left: 6px;
+          }
+        }
+        .cart-title {
+          text-transform: uppercase;
+          color: $black-01;
+        }
+        &:hover {
+          .shop {
+            color: $brown;
+          }
+        }
+      }
+    }
+  }
+}
+
+/*---------- Footer ------------*/
+#footer {
+  background-color: $black;
+  height: 365px;
+  @media (max-width: 769px) {
+    height: 400px;
+  }
+  @media (max-width: 368px) {
+    height: 654px;
+  }
+  .top-footer {
+    padding: 75px 0 61px;
+    position: relative;
+    @media (max-width: 769px) {
+      padding-bottom: 32px;
+    }
+    @media (max-width: 368px) {
+      padding-top: 52px;
+      padding-bottom: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 101px;
+      height: 4px;
+      background-color: $brown;
+      top: 0;
+      left: 0;
+    }
+    .navigaltion-link {
+      flex: 0 0 50%;
+      max-width: 50%;
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 429px;
+      }
+      &.flex {
+        @media (max-width: 368px) {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      .link-footer {
+        text-transform: uppercase;
+        color: $white;
+        &:hover {
+          color: $brown;
+        }
+        @media (max-width: 368px) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    .logo-brand {
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 32px;
+      }
+      @media (max-width: 368px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .bottom-footer {
+    .about-us {
+      flex: 0 0 50%;
+      width: 50%;
+      color: $gray-01;
+
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+      @media (max-width: 368px) {
+        max-width: 327px;
+        margin: 32px auto 0;
+        text-align: center;
+      }
+    }
+    .social-media {
+      flex: 0 0 50%;
+      max-width: 104px;
+      align-items: flex-end;
+      @media (max-width: 769px) {
+        order: 2;
+      }
+      @media (max-width: 368px) {
+        flex: 0 0 100%;
+        width: 100%;
+        margin: auto;
+      }
+      .media-link {
+        path {
+          &:hover {
+            background-color: $brown;
+            fill: $brown;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      flex: 0 0 100%;
+      width: 100%;
+      color: $gray-01;
+      margin-top: 56px;
+      @media (max-width: 769px) {
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+        order: 1;
+      }
+      @media (max-width: 368px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 48px;
+      }
+    }
+  }
+}
+
+/*------------- Home Product --------------*/
+
+#premium-speaker {
+  .box-premium-speaker {
+    background-color: $brown;
+    height: 560px;
+    margin-bottom: 48px;
+    position: relative;
+    overflow: hidden;
+    &.center {
+      @media (max-width: 769px) {
+        display: block;
+        height: 720px;
+        text-align: center;
+      }
+      @media (max-width: 368px) {
+        display: block;
+        height: 600px;
+        text-align: center;
+      }
+    }
+
+    .information-premium-speaker {
+      flex: 0 0 50%;
+      width: 50%;
+      max-width: 349px;
+      color: $white;
+      z-index: 2;
+      @media (max-width: 769px) {
+        margin: auto;
+        width: 349px;
+      }
+
+      .heading-pemium-speaker {
+        margin-bottom: 24px;
+        @media (max-width: 769px) {
+          padding-top: 64px;
+        }
+      }
+      .description-premium-speaker {
+        margin-bottom: 40px;
+      }
+    }
+
+    .box-img {
+      width: 411px;
+      height: 493px;
+      top: 43px;
+      z-index: 2;
+      @media (max-width: 769px) {
+        width: 198px;
+        height: 237px;
+        margin: auto;
+        padding-top: 52px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .box-pattern {
+      position: absolute;
+      left: -16%;
+      z-index: 1;
+      bottom: -316px;
+      @media (max-width: 769px) {
+        top: -40%;
+      }
+      @media (max-width: 769px) {
+        width: 558px;
+        height: 558px;
+        top: -21%;
+        left: -36%;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+}
+
+#speaker {
+  .box-speaker {
+    @media (max-width: 769px) {
+      height: 320px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+    position: relative;
+    margin-bottom: 48px;
+    .information-speaker {
+      position: absolute;
+      left: 100px;
+      @media (max-width: 769px) {
+        left: 24px;
+      }
+
+      .heading-speaker {
+        margin-bottom: 32px;
+      }
+    }
+  }
+}
+
+#earphones-home {
+  margin-bottom: 200px;
+  @media (max-width: 769px) {
+    margin-bottom: 96px;
+  }
+  .box-image-earning {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 540px;
+    height: 320px;
+    @media (max-width: 769px) {
+      max-width: 339px;
+    }
+    @media (max-width: 368px) {
+      flex: 0 0 100%;
+      width: 100%;
+      max-width: 327px;
+      height: 200px;
+      margin-bottom: 24px;
+    }
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+
+  .description-earning-proudct {
+    flex: 0 0 50%;
+    width: 50%;
+    max-width: 540px;
+    height: 320px;
+    background-color: $gray;
+    justify-content: center;
+    @media (max-width: 769px) {
+      max-width: 339px;
+      height: 320px;
+    }
+    @media (max-width: 368px) {
+      flex: 0 0 100%;
+      width: 100%;
+      max-width: 327px;
+      height: 200px;
+    }
+
+    .title {
+      text-transform: uppercase;
+      margin-bottom: 32px;
+    }
+  }
+}
