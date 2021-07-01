@@ -67,7 +67,7 @@ export function Navbar(props) {
           </div>
 
           <Link to = "/Audiophile" className="logo" onClick={removeHidden}>
-            <img src={"/Audiophile/assets/shared/desktop/logo.svg"} alt="audiophile" width = "165"/>
+            <img src={"/Audiophile/assets/shared/desktop/logo.svg"} alt="audiophile"/>
           </Link>
         </div>
 
@@ -124,18 +124,12 @@ export function Categories(props){
     const Items = [
       {
         name :'headphones',
-        height : 160,
-        width : 123
       },
       {
         name :'speakers',
-        height : 146,
-        width : 122
       },
       {
         name :'earphones',
-        height : 126,
-        width : 125
       },
   ]
 
@@ -145,7 +139,7 @@ export function Categories(props){
       return(
         <Link key={index} to = {`/${elem.name}`} onClick={()=> props.Category(elem.name)} className="categorie-item">
             <div className={`box-img-categorie ${elem.name}`}>
-              <img src={"/Audiophile/assets/shared/desktop/image-" + elem.name + ".png"} alt={elem.name} width= {elem.width} height = {elem.height} />
+              <img src={"/Audiophile/assets/shared/desktop/image-" + elem.name + ".png"} alt={elem.name}/>
             </div>
             <div className="description-categorie">
               <h6 className ="cart-title" > {elem.name}</h6>
