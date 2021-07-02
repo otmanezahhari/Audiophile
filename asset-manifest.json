@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/Audiophile/static/css/main.a8a01752.chunk.css",
-    "main.js": "/Audiophile/static/js/main.d7c24934.chunk.js",
-    "main.js.map": "/Audiophile/static/js/main.d7c24934.chunk.js.map",
+    "main.css": "/Audiophile/static/css/main.a9dbd385.chunk.css",
+    "main.js": "/Audiophile/static/js/main.22d56eb4.chunk.js",
+    "main.js.map": "/Audiophile/static/js/main.22d56eb4.chunk.js.map",
     "runtime-main.js": "/Audiophile/static/js/runtime-main.07fe37c0.js",
     "runtime-main.js.map": "/Audiophile/static/js/runtime-main.07fe37c0.js.map",
     "static/js/2.7392fb13.chunk.js": "/Audiophile/static/js/2.7392fb13.chunk.js",
@@ -10,14 +10,14 @@
     "static/js/3.935036a4.chunk.js": "/Audiophile/static/js/3.935036a4.chunk.js",
     "static/js/3.935036a4.chunk.js.map": "/Audiophile/static/js/3.935036a4.chunk.js.map",
     "index.html": "/Audiophile/index.html",
-    "static/css/main.a8a01752.chunk.css.map": "/Audiophile/static/css/main.a8a01752.chunk.css.map",
+    "static/css/main.a9dbd385.chunk.css.map": "/Audiophile/static/css/main.a9dbd385.chunk.css.map",
     "static/js/2.7392fb13.chunk.js.LICENSE.txt": "/Audiophile/static/js/2.7392fb13.chunk.js.LICENSE.txt",
     "static/media/styles.scss": "/Audiophile/static/media/image-hero.55c18e98.jpg"
   },
   "entrypoints": [
     "static/js/runtime-main.07fe37c0.js",
     "static/js/2.7392fb13.chunk.js",
-    "static/css/main.a8a01752.chunk.css",
-    "static/js/main.d7c24934.chunk.js"
+    "static/css/main.a9dbd385.chunk.css",
+    "static/js/main.22d56eb4.chunk.js"
   ]
 }
