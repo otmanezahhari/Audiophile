@@ -27,7 +27,7 @@ nav {
           margin-right: 68px;
         }
       }
-      .log {
+      .logo {
         width: 143px;
         height: 25px;
         img {
@@ -39,6 +39,7 @@ nav {
 
     #navbar {
       width: 429px;
+      height: 25px;
       @media (max-width: 769px) {
         display: none;
       }
@@ -69,6 +70,8 @@ nav {
     }
     .chart {
       cursor: pointer;
+      height: 20px;
+      width: 24px;
     }
   }
 }
@@ -305,23 +308,23 @@ nav {
 
       .box-img-categorie {
         position: absolute;
-        left: 50%;
+        left: 40%;
         transform: translateX(-50%);
         z-index: 2;
         img {
-          width: 100%;
+          width: 130%;
           height: 100%;
         }
 
         &.headphones {
-          top: 2px;
+          top: -42px;
         }
         &.speakers {
-          top: 0px;
+          top: -27px;
         }
 
         &.earphones {
-          top: 8px;
+          top: 0px;
         }
       }
 
@@ -375,7 +378,7 @@ nav {
     height: 654px;
   }
   .top-footer {
-    padding: 75px 0 61px;
+    padding: 75px 0 36px;
     position: relative;
     @media (max-width: 769px) {
       padding-bottom: 32px;
@@ -396,6 +399,7 @@ nav {
     .navigaltion-link {
       flex: 0 0 50%;
       max-width: 50%;
+      height: 25px;
       @media (max-width: 769px) {
         flex: 0 0 100%;
         width: 100%;
@@ -421,6 +425,8 @@ nav {
     }
 
     .logo-brand {
+      height: 25px;
+      width: 110px;
       @media (max-width: 769px) {
         flex: 0 0 100%;
         width: 100%;
@@ -598,6 +604,7 @@ nav {
 
       .heading-speaker {
         margin-bottom: 32px;
+        text-transform: uppercase;
       }
     }
   }
@@ -635,7 +642,7 @@ nav {
     max-width: 540px;
     height: 320px;
     background-color: $gray;
-    justify-content: center;
+
     @media (max-width: 769px) {
       max-width: 339px;
       height: 320px;
@@ -647,9 +654,12 @@ nav {
       height: 200px;
     }
 
-    .title {
-      text-transform: uppercase;
-      margin-bottom: 32px;
+    .box-center {
+      margin-left: 95px;
+      .title {
+        text-transform: uppercase;
+        margin-bottom: 32px;
+      }
     }
   }
 }
