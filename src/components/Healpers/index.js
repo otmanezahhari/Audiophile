@@ -14,11 +14,6 @@ export function ActiveDropDown(props){
 
 
 export function ProductComponenet(props){
-  const titleFormat = ()=>{
-    const newArray = props.title.split(' ');
-    const newArraym = newArray.slice(0,newArray.length-1).join(' ');
-    return newArraym;
-  }
   return(
     <div className="product-component">
         <div className="content-product container flex center justify-content-between">
@@ -27,7 +22,7 @@ export function ProductComponenet(props){
           </div>
           <div className={ "description-product " + props.order }>
             <h3  style ={{order : props.order,display : props.new === true ? "block":"none"}} className="  new-product overline">New product</h3>
-            <h2 className=" h2 title-product">{titleFormat()} <br/> {props.elem.category} </h2>
+            <h2 className=" h2 title-product">{titleFormat(props.title)} <br/> {props.elem.category} </h2>
             <p className="p short-description">
               {props.shortDescription}
             </p>
@@ -283,4 +278,32 @@ export function EarphonesHome(props){
     </div>
   )
 
+}
+
+
+/* -------------- Function ----------------*/
+export const formatName = (elem)=>{
+  const NewElem = elem.split(' ');
+  if(NewElem.length>3){
+    const Name = NewElem[1];
+    return NewElem[0]+' '+NewElem[1][0]+ NewElem[1][NewElem[1].length -1] + ' ' + NewElem[2] ;
+  }else{
+   return  NewElem[0];
+  }
+}
+
+export const titleFormat = (title)=>{
+  if(title){
+    
+    const newArray = title.split(' ');
+    const newArraym = newArray.slice(0,newArray.length-1).join(' ');
+    return newArraym;
+  }else{
+    return '';
+  }
+  
+}
+
+export const formatPrice = (price) =>{
+  return price.toFixed(0).replace(/\d(?=(\d{3}))/g, '$&,'); 
 }

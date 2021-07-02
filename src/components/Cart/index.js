@@ -1,29 +1,10 @@
 import "./cart.scss";
+import {formatName, formatPrice} from "../Healpers";
 
 import {Link } from "react-router-dom";
 
 function Cart(props){
  
-  
-  const formatName = (elem)=>{
-    const NewElem = elem.split(' ');
-    if(NewElem.length>3){
-      const Name = NewElem[1];
-      return NewElem[0]+' '+NewElem[1][0]+ NewElem[1][NewElem[1].length -1] + ' ' + NewElem[2] ;
-    }else{
-     return  NewElem[0];
-    }
-  }
-
-  const formatPrice = (price) =>{
-    const NewPrice = price.toString();
-    if(NewPrice.length>3){
-      return NewPrice[0]+','+ NewPrice.slice(1)
-    }else{
-        return price;
-    }  
-  }
-
   const displayEvent = (ev) =>{
     
     if(!ev.target.offsetParent){

@@ -1,4 +1,4 @@
-import {Navbar, Footer} from "../Healpers";
+import {Navbar, Footer, formatName, formatPrice} from "../Healpers";
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -10,25 +10,6 @@ function Checkout(props){
 
   const [displayMessage,SetDisplayThanks] = useState(false);
 
-  const formatName = (elem)=>{
-    const NewElem = elem.split(' ');
-    if(NewElem.length>3){
-      const Name = NewElem[1];
-      
-      return NewElem[0]+' '+NewElem[1][0]+ NewElem[1][NewElem[1].length -1] + ' ' + NewElem[2] ;
-    }else{
-     return  NewElem[0];
-    }
-  }
-
-  const formatPrice = (price) =>{
-    const NewPrice = price.toString();
-    if(NewPrice.length>3){
-      return NewPrice[0]+','+ NewPrice.slice(1)
-    }else{
-        return price;
-    }  
-  }
 
   const countPrice = () =>{
     let sum = 0;

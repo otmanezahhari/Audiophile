@@ -1,4 +1,4 @@
-import {Navbar, Categories, About, Footer} from "../Healpers";
+import {Navbar, Categories, About, Footer, titleFormat,formatPrice} from "../Healpers";
 import "./details.scss";
 import {Link} from "react-router-dom";
 import {useState} from "react";
@@ -23,32 +23,7 @@ function ProductDetail(props){
         }else{
           SetCount(1)
         }  
-  }
-  
-  const formatPrice = (price) =>{
-    if(price){
-      const NewPrice = price.toString();
-      if(NewPrice.length>3){
-        return NewPrice[0]+','+ NewPrice.slice(1)
-      }else{
-          return price;
-      }  
-    }
-  }
-  
-  const titleFormat = (title)=>{
-    if(title){
-      
-      const newArray = title.split(' ');
-      const newArraym = newArray.slice(0,newArray.length-1).join(' ');
-      return newArraym;
-    }else{
-      return '';
-    }
-    
-  }
-
-       
+  }     
   return(
    
       
@@ -75,7 +50,7 @@ function ProductDetail(props){
                   {product.description}
                 </p>
                 <div className="price-product">
-                  $ {formatPrice(product.price)}
+                  $ {product.features? formatPrice(product.price):''}
                 </div>
                 <div className="quantity-item-product flex ">
                   <div className="quantity-box center">

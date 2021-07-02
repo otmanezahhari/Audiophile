@@ -259,7 +259,7 @@ nav {
 #categories {
   .categorie-items {
     height: 284px;
-    margin: 120px auto;
+    margin: 120px auto 168px;
     @media (max-width: 769px) {
       height: 217px;
       margin: 96px auto;
@@ -275,18 +275,25 @@ nav {
       max-width: 350px;
       height: 263px;
       position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
 
       @media (max-width: 1110px) {
         max-width: 300px;
+        height: 217px;
       }
       @media (max-width: 995px) {
         max-width: 270px;
+        height: 217px;
       }
       @media (max-width: 895px) {
         max-width: 220px;
+        height: 217px;
       }
       @media (max-width: 769px) {
         width: 200px;
+        height: 217px;
       }
       @media (max-width: 368px) {
         flex: 0 0 100%;
@@ -307,14 +314,14 @@ nav {
         }
 
         &.headphones {
-          top: -62px;
+          top: 2px;
         }
         &.speakers {
-          top: -50px;
+          top: 0px;
         }
 
         &.earphones {
-          top: -28px;
+          top: 8px;
         }
       }
 
@@ -324,6 +331,9 @@ nav {
         cursor: pointer;
         height: 204px;
         background-color: $gray;
+        @media (max-width: 769px) {
+          height: 165px;
+        }
         .link-categorie {
           justify-content: center;
           margin: 8px auto 0;
@@ -339,7 +349,11 @@ nav {
           text-transform: uppercase;
           color: $black-01;
           padding-top: 116px;
+          @media (max-width: 769px) {
+            padding-top: 88px;
+          }
         }
+
         &:hover {
           .shop {
             color: $brown;
@@ -527,8 +541,9 @@ nav {
     .box-img {
       width: 411px;
       height: 493px;
-      top: 43px;
+      top: 42px;
       z-index: 2;
+      position: relative;
       @media (max-width: 769px) {
         width: 198px;
         height: 237px;
