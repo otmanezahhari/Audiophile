@@ -51,7 +51,7 @@ export function Navbar(props) {
  
   return (
     <nav>
-      <Cart removeAll={props.removeAll} FormatName={props.FormatName} cartProduct={props.cartProduct} productQuantity={props.productQuantity}/>
+      <Cart  updateQuantityCategory={props.updateQuantityCategory} count={props.count} addQuantity={props.addQuantity} removeAll={props.removeAll} FormatName={props.FormatName} cartProduct={props.cartProduct} productQuantity={props.productQuantity}/>
       <div className="navigation container flex justify-content-between">
 
         <div className="home-page-icon flex center">
@@ -69,9 +69,25 @@ export function Navbar(props) {
         <nav id="navbar">
           <ul className="navigation-link flex justify-content-between">
             <li><Link to="/Audiophile" className="link" onClick={removeHidden}>Home</Link></li>
-            <li><Link to="/headphones" className="link" onClick={()=> props.Category('headphones')}>Headphones</Link></li>
-            <li><Link to="/speakers" className="link" onClick={()=> props.Category('speakers')}>Speakers</Link></li>
-            <li><Link to="/earphones" className="link" onClick={()=> props.Category('earphones')}>Earphones</Link></li>
+            <li><Link to="/headphones" className="link" onClick={()=>{
+                props.Category('headphones');
+                if(props.count>1){
+                  props.addQuantity(-props.count+1);
+                }
+                
+            } }>Headphones</Link></li>
+            <li><Link to="/speakers" className="link" onClick={()=>{
+              props.Category('speakers');
+              if(props.count>1){
+                props.addQuantity(-props.count+1);
+              }
+            } }>Speakers</Link></li>
+            <li><Link to="/earphones" className="link" onClick={()=>{
+              props.Category('earphones');
+              if(props.count>1){
+                props.addQuantity(-props.count+1);
+              }
+            } }>Earphones</Link></li>
           </ul>
         </nav>
         <div id="nav-mobile">
@@ -305,5 +321,21 @@ export const titleFormat = (title)=>{
 }
 
 export const formatPrice = (price) =>{
-  return price.toFixed(0).replace(/\d(?=(\d{3}))/g, '$&,'); 
+  console.log(price)
+  return parseInt(price).toFixed(2).replace(/\d(?=(\d{3})+\.)/g, '$&,').split('.')[0]
+}
+
+
+export const countPrice = (cartProduct) =>{
+  let sum = 0;
+  if(cartProduct ){
+    cartProduct.map(elem=>{
+      sum+= elem.product.price * elem.count;
+    });
+    console.log("from countPrice", sum)
+
+    return sum
+  }
+   return '';
+ 
 }

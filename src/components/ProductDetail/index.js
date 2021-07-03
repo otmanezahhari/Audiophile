@@ -1,41 +1,32 @@
 import {Navbar, Categories, About, Footer, titleFormat,formatPrice} from "../Healpers";
 import "./details.scss";
 import {Link} from "react-router-dom";
-import {useState} from "react";
-import Cart from "../Cart";
 
 function ProductDetail(props){
   const {product} = props;
   const newlocation = window.location.href.split('/');
-  const [count, SetCount] = useState(1);
-
-  
   
   window.onload = ()=>{
-    props.display(newlocation[newlocation.length - 1])
+    props.display(newlocation[newlocation.length - 1]);
+    
   }
 
-  const addQuantity = (elem) => {   
-     
-        if ( count > 0){
-          SetCount(count + elem)
-        
-        }else{
-          SetCount(1)
-        }  
-  }     
+   
   return(
    
       
       <div id="product-display">
-        <Cart removeAll={props.removeAll} addCart = {props.addCart} productQuantity={props.productQuantity} cartProduct={props.cartProduct} />
-        <Navbar productQuantity={props.productQuantity} cartProduct={props.cartProduct} Category = {props.Category}/>
-
+        <Navbar  updateQuantityCategory={props.updateQuantityCategory} removeAll={props.removeAll} addCart = {props.addCart} count={props.count} addQuantity={props.addQuantity} productQuantity={props.productQuantity} cartProduct={props.cartProduct} Category = {props.Category}/>
 
         <div id="product-details">
           <div className="product-details-content container">
             <div className="link-go-back">
-              <Link to={`/${product.category}`} className="link" onClick = {()=> props.Category(product.category)}>Go back</Link>
+              <Link to={`/${product.category}`} className="link" onClick = {()=>{
+                props.Category(product.category)
+                if(props.count>1){
+                  props.addQuantity(-props.count);
+                }
+              }}>Go back</Link>
             </div>
 
             <div className="product-item flex center justify-content-between">
@@ -54,11 +45,11 @@ function ProductDetail(props){
                 </div>
                 <div className="quantity-item-product flex ">
                   <div className="quantity-box center">
-                    <input className="quantity" value = {count > 0 ? count : 1}/>    
-                    <div className="plus" onClick = {() => addQuantity(+1)} >+</div>
-                    <div className="minus" onClick = {() => addQuantity(-1)} >-</div>
+                    <input className="quantity" value = {props.count > 0 ? props.count : 1}/>    
+                    <div className="plus" onClick = {() => props.addQuantity(+1)} >+</div>
+                    <div className="minus" onClick = {() => props.addQuantity(-1)} >-</div>
                   </div>
-                  <button className="btn link-add-cart" onClick={()=>props.addCart(product,count)} >Add to cart</button>
+                  <button className="btn link-add-cart" onClick={()=>props.addCart(product,props.count)} >Add to cart</button>
                 </div>
                 
               </div>

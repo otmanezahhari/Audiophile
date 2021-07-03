@@ -1,4 +1,4 @@
-import {Navbar, Footer, formatName, formatPrice} from "../Healpers";
+import {Navbar, Footer, formatName, formatPrice, countPrice} from "../Healpers";
 import {useState} from "react";
 import {Link} from "react-router-dom";
 import { useForm } from "react-hook-form";
@@ -11,18 +11,18 @@ function Checkout(props){
   const [displayMessage,SetDisplayThanks] = useState(false);
 
 
-  const countPrice = () =>{
-    let sum = 0;
-    if(props.cartProduct ){
-      props.cartProduct.map(elem=>{
-        sum+= elem.product.price * elem.count;
-      });
+  // const countPrice = () =>{
+  //   let sum = 0;
+  //   if(props.cartProduct ){
+  //     props.cartProduct.map(elem=>{
+  //       sum+= elem.product.price * elem.count;
+  //     });
   
-      return sum
-    }
-     return '';
+  //     return sum
+  //   }
+  //    return '';
    
-  }
+  // }
   
   const onSubmit = () =>{
     SetDisplayThanks(true);
@@ -93,7 +93,7 @@ function Checkout(props){
             </div>
             <div className="box-total-price">
               <p className="label">Grand total</p>
-              <p className="p cart-title">$ {formatPrice(countPrice()+50)}</p>
+              <p className="p cart-title">$ {formatPrice(countPrice(props.cartProduct)+50)}</p>
             </div>
 
             <Link className = "btn back-to-home" to = "/Audiophile" onClick={removeHidden}>
@@ -113,7 +113,7 @@ function Checkout(props){
       
       <div id="checkout">
         
-        <Navbar removeAll={props.removeAll} productQuantity={props.productQuantity} cartProduct={props.cartProduct} Category = {props.Category}/>
+        <Navbar updateQuantityCategory={props.updateQuantityCategory} removeAll={props.removeAll} productQuantity={props.productQuantity} cartProduct={props.cartProduct} Category = {props.Category}/>
 
 
         <div className="container">
@@ -303,7 +303,7 @@ function Checkout(props){
                       <div className="total-price-box">
                         <div className="total flex justify-content-between">
                           <h3 className="p title">Total</h3>
-                          <p className="p price">$ {formatPrice(countPrice())}</p>
+                          <p className="p price">$ {formatPrice(countPrice(props.cartProduct))}</p>
                         </div>
                         <div className="total flex justify-content-between">
                           <h3 className="p title">Shipping</h3>
@@ -315,7 +315,7 @@ function Checkout(props){
                         </div>
                         <div className="total flex justify-content-between">
                           <h3 className="p title">Grand total</h3>
-                          <p className="p price grand-total">$ {formatPrice(countPrice()+50)}</p>
+                          <p className="p price grand-total">$ {formatPrice(countPrice(props.cartProduct)+50)}</p>
                         </div>
 
                       </div>

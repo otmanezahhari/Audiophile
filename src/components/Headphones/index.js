@@ -15,7 +15,7 @@ function Headphones(props){
     <>
 
     
-       <Navbar removeAll={props.removeAll} productQuantity={props.productQuantity} cartProduct={props.cartProduct} Category = {props.Category}/>
+       <Navbar updateQuantityCategory={props.updateQuantityCategory} count={props.count} addQuantity={props.addQuantity} removeAll={props.removeAll} productQuantity={props.productQuantity} cartProduct={props.cartProduct} Category = {props.Category}/>
        <ActiveDropDown title={'Headphones'} />
        {ProductList.map((elem)=>{
         

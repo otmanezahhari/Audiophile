@@ -17,22 +17,48 @@ function App() {
   const [categoryProduct, SetCategroryProducts]     = useState([]);
   const [productDescription, SetProductDiscription] = useState([]);
   const [cartProduct, SetCartProduct]               = useState([]);
-  
- 
+  const [count, SetCount]                           = useState(1);
+
+
+  const addQuantity = (elem) => {   
+     
+    if ( count > 0){
+      SetCount(count + elem)
+    
+    }else{
+      SetCount(1)
+    }  
+  }  
 
   useEffect(() => {
     ProductApi.getAll()
     .then(data => SetData(data));
   }, [])
 
- 
-
-
-
   const updateCategory = (category) =>{
     const NewCategories = data.filter((elem) => elem.category === category).reverse();
     SetCategroryProducts(NewCategories);
     document.querySelector("body").classList = '';
+  }
+
+  const updateQuantityCategory = (product,quantity) =>{
+    const newProduct = [...cartProduct];
+    
+    if(quantity=== 0){
+      console.log("xx")
+      const UpdateQuantityCart = newProduct.filter(elem=> elem.product !== product);
+      SetCartProduct(UpdateQuantityCart);
+    }else{
+      const UpdateQuantityCart = newProduct.map((elem)=>{
+        console.log("old", elem);
+        if(elem.product === product){
+          elem.count = quantity;
+          return elem;
+        }
+        return elem; 
+      })
+      SetCartProduct(UpdateQuantityCart);
+    }
   }
 
   const displayProductDiscription = (slug) =>{
@@ -80,45 +106,37 @@ function App() {
         <Switch>
           <Route path="/Audiophile" exact>   
 
-             <Home removeAll={removeAll} Category = {updateCategory} cartProduct={cartProduct} display = {displayProductDiscription} />
+             <Home updateQuantityCategory={updateQuantityCategory}  removeAll={removeAll} Category = {updateCategory} cartProduct={cartProduct} display = {displayProductDiscription} />
 
           </Route>
           <Route path="/product-detail/:elemName" exact>
 
-              <ProductDetail removeAll={removeAll} cartProduct={cartProduct}  product={productDescription} Category = {updateCategory} display = {displayProductDiscription} addCart = {addproductToCart} />
+              <ProductDetail updateQuantityCategory={updateQuantityCategory}  count={count} addQuantity={addQuantity} removeAll={removeAll} cartProduct={cartProduct}  product={productDescription} Category = {updateCategory} display = {displayProductDiscription} addCart = {addproductToCart} />
 
           </Route>
 
           <Route path="/headphones" exact>
             
-              <Headphones removeAll={removeAll} cartProduct={cartProduct} display = {displayProductDiscription} ProductList ={categoryProduct}  Category = {updateCategory} />
+              <Headphones updateQuantityCategory={updateQuantityCategory}  removeAll={removeAll} cartProduct={cartProduct} display = {displayProductDiscription} ProductList ={categoryProduct}  Category = {updateCategory} />
             
           </Route>
 
           <Route path="/speakers" exact>
             
-              <Speakers removeAll={removeAll} cartProduct={cartProduct}  display = {displayProductDiscription} ProductList ={categoryProduct}    Category = {updateCategory} />
+              <Speakers updateQuantityCategory={updateQuantityCategory}  removeAll={removeAll} cartProduct={cartProduct}  display = {displayProductDiscription} ProductList ={categoryProduct}    Category = {updateCategory} />
                       
           </Route>
 
           <Route path="/earphones" exact>
 
-              <Earphones removeAll={removeAll} cartProduct={cartProduct} display = {displayProductDiscription} ProductList ={categoryProduct}   Category = {updateCategory} />
+              <Earphones updateQuantityCategory={updateQuantityCategory}  removeAll={removeAll} cartProduct={cartProduct} display = {displayProductDiscription} ProductList ={categoryProduct}   Category = {updateCategory} />
           
           </Route>
           <Route path="/checkout" exact>
 
-              <Checkout removeAll={removeAll} cartProduct={cartProduct}  Category = {updateCategory} display = {displayProductDiscription}/>
+              <Checkout updateQuantityCategory={updateQuantityCategory} removeAll={removeAll} cartProduct={cartProduct}  Category = {updateCategory} display = {displayProductDiscription}/>
 
           </Route>
-          <Route path="/Thanks" exact>
-
-              <Checkout removeAll={removeAll} cartProduct={cartProduct}  Category = {updateCategory} display = {displayProductDiscription}/>
-
-          </Route>
-          
-          
-
         </Switch>
     </BrowserRouter>
     

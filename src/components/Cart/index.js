@@ -1,9 +1,10 @@
 import "./cart.scss";
-import {formatName, formatPrice} from "../Healpers";
+import {formatName, formatPrice, countPrice} from "../Healpers";
 
 import {Link } from "react-router-dom";
 
 function Cart(props){
+  console.log(props)
  
   const displayEvent = (ev) =>{
     
@@ -13,21 +14,12 @@ function Cart(props){
     }
   }
 
-  const countPrice = () =>{
-    let sum = 0;
-    if(props.cartProduct ){
-      props.cartProduct.map(elem=>{
-        sum+= elem.product.price * elem.count;
-      });
-  
-      return formatPrice(sum)
-    }
-     return '';
-   
-  }
-
   const removeHidden =()=> {
     document.querySelector("body").classList.toggle("hidden");
+  }
+
+  const updateCartQuantity = (product, quantity)=>{
+    props.updateQuantityCategory(product,quantity);
   }
 
   return(
@@ -61,8 +53,8 @@ function Cart(props){
                         </div>
                         <div className="box-quantity flex center">
                             <input className="quantity" value= {elem.count} />    
-                            <div className="plus">+</div>
-                            <div className="minus">-</div>
+                            <div className="plus" onClick = {() => updateCartQuantity(elem.product,elem.count + 1)}>+</div>
+                            <div className="minus"  onClick = {() => updateCartQuantity(elem.product,elem.count - 1)}>-</div>
                         </div>
                       </div>
                     )
@@ -73,7 +65,7 @@ function Cart(props){
             
               <div className="total-price flex justify-content-between">
                 <p className="total p ">total</p>
-                <div className="price cart-title">$ {countPrice()}</div>
+                <div className="price cart-title">$ {formatPrice(countPrice(props.cartProduct))}</div>
               </div>
 
               <Link to="/checkout" className="checkout btn" onClick={removeHidden}>

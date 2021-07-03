@@ -5,7 +5,7 @@ function Home(props){
   return(
     <>
       <header id = "header">
-        <Navbar removeAll={props.removeAll} productQuantity={props.productQuantity} cartProduct={props.cartProduct}  Category = {props.Category}/>
+        <Navbar updateQuantityCategory={props.updateQuantityCategory} count={props.count} addQuantity={props.addQuantity} removeAll={props.removeAll} productQuantity={props.productQuantity} cartProduct={props.cartProduct}  Category = {props.Category}/>
         <Hero display  = {props.display}/>
       </header>
     
