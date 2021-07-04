@@ -50,7 +50,7 @@ export function Navbar(props) {
   }
  
   return (
-    <nav role="navigation">
+    <nav>
       <Cart  updateQuantityCategory={props.updateQuantityCategory} count={props.count} addQuantity={props.addQuantity} removeAll={props.removeAll} FormatName={props.FormatName} cartProduct={props.cartProduct} productQuantity={props.productQuantity}/>
       <div className="navigation container flex justify-content-between">
 
