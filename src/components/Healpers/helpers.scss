@@ -469,8 +469,8 @@ nav {
         margin: auto;
       }
       .media-link {
-        path {
-          &:hover {
+        &:hover {
+          path {
             background-color: $brown;
             fill: $brown;
           }
