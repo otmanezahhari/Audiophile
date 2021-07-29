@@ -1,23 +1,21 @@
 {
   "files": {
-    "main.css": "/Audiophile/static/css/main.7fb46ed5.chunk.css",
-    "main.js": "/Audiophile/static/js/main.bf08c4f5.chunk.js",
-    "main.js.map": "/Audiophile/static/js/main.bf08c4f5.chunk.js.map",
-    "runtime-main.js": "/Audiophile/static/js/runtime-main.07fe37c0.js",
-    "runtime-main.js.map": "/Audiophile/static/js/runtime-main.07fe37c0.js.map",
-    "static/js/2.3ed44eff.chunk.js": "/Audiophile/static/js/2.3ed44eff.chunk.js",
-    "static/js/2.3ed44eff.chunk.js.map": "/Audiophile/static/js/2.3ed44eff.chunk.js.map",
-    "static/js/3.935036a4.chunk.js": "/Audiophile/static/js/3.935036a4.chunk.js",
-    "static/js/3.935036a4.chunk.js.map": "/Audiophile/static/js/3.935036a4.chunk.js.map",
+    "main.css": "/Audiophile/static/css/main.8b1f2eff.chunk.css",
+    "main.js": "/Audiophile/static/js/main.b8dec91e.chunk.js",
+    "main.js.map": "/Audiophile/static/js/main.b8dec91e.chunk.js.map",
+    "runtime-main.js": "/Audiophile/static/js/runtime-main.ba8d941a.js",
+    "runtime-main.js.map": "/Audiophile/static/js/runtime-main.ba8d941a.js.map",
+    "static/js/2.9a43542f.chunk.js": "/Audiophile/static/js/2.9a43542f.chunk.js",
+    "static/js/2.9a43542f.chunk.js.map": "/Audiophile/static/js/2.9a43542f.chunk.js.map",
     "index.html": "/Audiophile/index.html",
-    "static/css/main.7fb46ed5.chunk.css.map": "/Audiophile/static/css/main.7fb46ed5.chunk.css.map",
-    "static/js/2.3ed44eff.chunk.js.LICENSE.txt": "/Audiophile/static/js/2.3ed44eff.chunk.js.LICENSE.txt",
-    "static/media/styles.scss": "/Audiophile/static/media/image-hero.55c18e98.jpg"
+    "static/css/main.8b1f2eff.chunk.css.map": "/Audiophile/static/css/main.8b1f2eff.chunk.css.map",
+    "static/js/2.9a43542f.chunk.js.LICENSE.txt": "/Audiophile/static/js/2.9a43542f.chunk.js.LICENSE.txt",
+    "static/media/index.scss": "/Audiophile/static/media/image-hero.55c18e98.jpg"
   },
   "entrypoints": [
-    "static/js/runtime-main.07fe37c0.js",
-    "static/js/2.3ed44eff.chunk.js",
-    "static/css/main.7fb46ed5.chunk.css",
-    "static/js/main.bf08c4f5.chunk.js"
+    "static/js/runtime-main.ba8d941a.js",
+    "static/js/2.9a43542f.chunk.js",
+    "static/css/main.8b1f2eff.chunk.css",
+    "static/js/main.b8dec91e.chunk.js"
   ]
 }
