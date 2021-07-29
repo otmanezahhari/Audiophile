@@ -1,0 +1,76 @@
+@import "assets/styles/variables.scss";
+
+/*------------ Product Componenet Category ------------*/
+
+.product-component {
+  .content-product {
+    &:last-of-type {
+      margin: 160px auto 0;
+      @media (max-width: 769px) {
+        margin: 120px auto 0;
+      }
+    }
+    .image-product-box {
+      flex: 0 0 50%;
+      width: 50%;
+      max-width: 540px;
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 689px;
+        height: 352px;
+        margin-bottom: 52px;
+      }
+      img {
+        width: 100%;
+        height: 100%;
+      }
+    }
+
+    .description-product {
+      flex: 0 0 50%;
+      width: 50%;
+      max-width: 445px;
+      &.order {
+        order: -1;
+        @media (max-width: 769px) {
+          order: 1;
+        }
+      }
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 572px;
+        text-align: center;
+        margin: auto;
+        height: 352px;
+      }
+
+      .new-product {
+        text-transform: uppercase;
+        color: $brown;
+        margin-bottom: 16px;
+        @media (max-width: 769px) {
+          margin-bottom: 16px;
+        }
+      }
+
+      .title-product {
+        text-transform: uppercase;
+        margin-bottom: 32px;
+        width: 300px;
+        @media (max-width: 769px) {
+          margin: 0 auto 32px;
+        }
+      }
+
+      .short-description {
+        color: $gray-01;
+        margin-bottom: 40px;
+        @media (max-width: 769px) {
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,43 @@
+@import "assets/styles/variables.scss";
+
+/*------------- Hero -------------*/
+.hero {
+  height: calc(100% - 96px);
+  @media (max-width: 769px) {
+    position: relative;
+  }
+  .description {
+    width: 398px;
+    @media (max-width: 769px) {
+      width: 379px;
+      text-align: center;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+    }
+
+    span {
+      &.overline {
+        color: $gray-01;
+        text-transform: uppercase;
+      }
+    }
+
+    .h1 {
+      text-transform: uppercase;
+      color: $white-01;
+      margin-top: 16px;
+      margin-bottom: 24px;
+    }
+
+    .p {
+      color: $gray-01;
+      width: 349px;
+      margin-bottom: 40px;
+      @media (max-width: 368px) {
+        width: 328px;
+        margin: auto;
+      }
+    }
+  }
+}

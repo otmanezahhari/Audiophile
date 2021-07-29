@@ -1,0 +1,198 @@
+@import "./typography";
+@import "./variables";
+@import "./animation";
+@import "./functions";
+@import "./mixins";
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Manrope", sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #fafafa;
+  overflow-x: hidden;
+  &.hidden {
+    overflow-y: hidden;
+  }
+}
+
+a,
+ul,
+span,
+h1,
+h6,
+h2,
+p,
+h3,
+h4,
+h5 {
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+  @include font-size(13px, 700, 2px, 25px);
+  display: inline-block;
+}
+
+ul {
+  list-style: none;
+}
+
+.h1 {
+  @include font-size(56px, 700, 2px, 58px);
+  @media (max-width: 368px) {
+    @include font-size(36px, 700, 1.29px, 40px);
+  }
+}
+.h2 {
+  @include font-size(40px, 700, 1.43px, 44px);
+  @media (max-width: 769px) {
+    @include font-size(28px, 700, 2px, 28px);
+  }
+}
+.h3 {
+  @include font-size(28px, 700, 2px, 28px);
+}
+
+.p {
+  @include font-size(15px, 500, 0px, 25px);
+}
+.cart-title {
+  @include font-size(18px, 700, 1.29px, 18px);
+}
+
+.label {
+  @include font-size(12px, 500, -0.21px, 12px);
+}
+/*    Helpers    */
+
+.container {
+  width: 100%;
+  max-width: 1110px;
+  margin: auto;
+
+  @media (max-width: 769px) {
+    max-width: 689px;
+    padding: 12px 0;
+  }
+  @media (max-width: 368px) {
+    max-width: 327px;
+    padding: 12px 0;
+  }
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.justify-content-between {
+  justify-content: space-between;
+}
+
+.justify-content-around {
+  justify-content: space-around;
+}
+
+.center {
+  display: flex;
+  align-items: center;
+}
+
+#header {
+  background-image: url("../home/desktop/image-hero.jpg");
+  height: 729px;
+  background-size: cover;
+  background-position: 50% 50%;
+  @media (max-width: 769px) {
+    background-image: url("../home/tablet/image-header.jpg");
+    max-width: 768px;
+  }
+  @media (max-width: 368px) {
+    background-image: url("../home/mobile/image-header.jpg");
+    max-width: 375px;
+    height: 600px;
+  }
+}
+
+.overline {
+  @include font-size(14px, 400, 10px, auto);
+}
+
+.btn {
+  padding: 15px 30px;
+  letter-spacing: 1px;
+  cursor: pointer;
+  outline: none;
+  border: none;
+  text-transform: uppercase;
+  &.brown {
+    background-color: $brown;
+    color: $white;
+    &:hover {
+      background-color: $brwn-01;
+    }
+  }
+
+  &.black {
+    background-color: $black-01;
+    color: $white;
+    &:hover {
+      background-color: $black-hover;
+    }
+  }
+
+  &.transparent {
+    background-color: transparent;
+    border: 1px solid $black-01;
+    color: $black;
+    &:hover {
+      background-color: $black-01;
+      color: $white-01;
+    }
+  }
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 445px 635px;
+  grid-template-rows: 280px 280px;
+  column-gap: 32px;
+  row-gap: 32px;
+  @media (max-width: 769px) {
+    grid-template-columns: 277px 395px;
+    grid-template-rows: 174px 174px;
+  }
+  @media (max-width: 368px) {
+    display: block;
+  }
+}
+
+.grid-box-50 {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  @media (max-width: 368px) {
+    width: 327px;
+    height: 174px;
+    margin-bottom: 20px;
+  }
+}
+
+.grid-box-100 {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  grid-row-start: 1;
+  grid-row-end: 3;
+  @media (max-width: 368px) {
+    width: 327px;
+    height: 368px;
+    margin-bottom: 20px;
+  }
+}

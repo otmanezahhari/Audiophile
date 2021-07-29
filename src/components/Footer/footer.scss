@@ -1,0 +1,134 @@
+@import "assets/styles/variables.scss";
+
+/*---------- Footer ------------*/
+#footer {
+  background-color: $black;
+  height: 365px;
+  @media (max-width: 769px) {
+    height: 400px;
+  }
+  @media (max-width: 368px) {
+    height: 654px;
+  }
+  .top-footer {
+    padding: 75px 0 36px;
+    position: relative;
+    @media (max-width: 769px) {
+      padding-bottom: 32px;
+    }
+    @media (max-width: 368px) {
+      padding-top: 52px;
+      padding-bottom: 0;
+    }
+    &::before {
+      content: "";
+      position: absolute;
+      width: 101px;
+      height: 4px;
+      background-color: $brown;
+      top: 0;
+      left: 0;
+    }
+    .navigaltion-link {
+      flex: 0 0 50%;
+      max-width: 50%;
+      height: 25px;
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 429px;
+      }
+      &.flex {
+        @media (max-width: 368px) {
+          display: block;
+          text-align: center;
+        }
+      }
+
+      .link-footer {
+        text-transform: uppercase;
+        color: $white;
+        &:hover {
+          color: $brown;
+        }
+        @media (max-width: 368px) {
+          margin-bottom: 16px;
+        }
+      }
+    }
+
+    .logo-brand {
+      height: 25px;
+      width: 110px;
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        margin-bottom: 32px;
+      }
+      @media (max-width: 368px) {
+        text-align: center;
+      }
+    }
+  }
+
+  .bottom-footer {
+    .about-us {
+      flex: 0 0 50%;
+      width: 50%;
+      color: $gray-01;
+
+      @media (max-width: 769px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+      }
+      @media (max-width: 368px) {
+        max-width: 327px;
+        margin: 32px auto 0;
+        text-align: center;
+      }
+    }
+    .social-media {
+      flex: 0 0 50%;
+      max-width: 104px;
+      align-items: flex-end;
+      @media (max-width: 769px) {
+        order: 2;
+      }
+      @media (max-width: 368px) {
+        flex: 0 0 100%;
+        width: 100%;
+        margin: auto;
+      }
+      .media-link {
+        &:hover {
+          path {
+            background-color: $brown;
+            fill: $brown;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      flex: 0 0 100%;
+      width: 100%;
+      color: $gray-01;
+      margin-top: 56px;
+      @media (max-width: 769px) {
+        flex: 0 0 50%;
+        width: 50%;
+        max-width: 50%;
+        order: 1;
+      }
+      @media (max-width: 368px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 100%;
+        text-align: center;
+        margin-bottom: 48px;
+      }
+    }
+  }
+}

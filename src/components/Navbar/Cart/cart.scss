@@ -1,0 +1,131 @@
+@import "assets/styles/variables.scss";
+#cart {
+  position: fixed;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba($black, 0.5);
+  display: none;
+  z-index: 20;
+  &.visible {
+    display: block;
+  }
+  .container {
+    position: relative;
+    .cart-content {
+      width: 377px;
+      height: auto;
+      background-color: $white;
+      position: absolute;
+      top: 129px;
+      right: 0;
+      padding: 25px;
+      border-radius: 8px;
+      @media (max-width: 368px) {
+        width: 327px;
+      }
+      #message {
+        text-align: center;
+      }
+      .box-heading {
+        margin-bottom: 24px;
+        .cart-title {
+          text-transform: uppercase;
+        }
+        .p {
+          color: $gray-01;
+          cursor: pointer;
+          &:hover {
+            color: $brwn-01;
+          }
+        }
+      }
+
+      .cart-content-products {
+        margin-bottom: 32px;
+        .product {
+          margin-bottom: 24px;
+          .box-img-product {
+            width: 64px;
+            height: 64px;
+            background-color: red;
+            margin-right: 16px;
+            img {
+              width: 100%;
+              height: 100%;
+            }
+          }
+
+          .description {
+            height: 50px;
+            width: 76px;
+            margin-top: 7px;
+            .title {
+              font-weight: 700;
+              text-transform: uppercase;
+            }
+            .price {
+              color: $gray-01;
+            }
+          }
+
+          .box-quantity {
+            width: 96px;
+            height: 32px;
+            position: relative;
+            background-color: $gray;
+            outline: none;
+            justify-content: center;
+            margin-top: 10px;
+
+            input {
+              background-color: inherit;
+              position: relative;
+              width: 100%;
+              height: 100%;
+              text-align: center;
+              border: none;
+              outline: none;
+            }
+            .minus,
+            .plus {
+              position: absolute;
+              color: $gray-01;
+              width: 16px;
+              height: 18px;
+              cursor: pointer;
+              top: 4px;
+              &:hover {
+                color: $brown;
+              }
+            }
+
+            .plus {
+              right: 10px;
+            }
+            .minus {
+              left: 10px;
+            }
+          }
+        }
+      }
+
+      .total-price {
+        margin-bottom: 24px;
+        .total {
+          text-transform: uppercase;
+          color: $gray-01;
+        }
+      }
+
+      .checkout {
+        background-color: $brown;
+        text-align: center;
+        color: $white;
+        width: 100%;
+        &:hover {
+          background-color: $brwn-01;
+        }
+      }
+    }
+  }
+}

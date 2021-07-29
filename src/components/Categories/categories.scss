@@ -1,0 +1,109 @@
+@import "assets/styles/variables.scss";
+/*--------------- Categories -----------------*/
+.categories-items-gnrl {
+  .categorie-items {
+    height: 284px;
+    margin: 120px auto 168px;
+    @media (max-width: 769px) {
+      height: 217px;
+      margin: 96px auto;
+    }
+    @media (max-width: 368px) {
+      height: auto;
+      margin: 82px auto 0;
+    }
+    .categorie-item {
+      text-align: center;
+      flex: 1 1 32%;
+      width: 32%;
+      max-width: 350px;
+      height: 263px;
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-end;
+
+      @media (max-width: 1110px) {
+        max-width: 300px;
+        height: 217px;
+      }
+      @media (max-width: 995px) {
+        max-width: 270px;
+        height: 217px;
+      }
+      @media (max-width: 895px) {
+        max-width: 220px;
+        height: 217px;
+      }
+      @media (max-width: 769px) {
+        width: 200px;
+        height: 217px;
+      }
+      @media (max-width: 368px) {
+        flex: 0 0 100%;
+        width: 100%;
+        max-width: 327px;
+        height: 217px;
+        margin: 0 auto 82px;
+      }
+
+      .box-img-categorie {
+        position: absolute;
+        left: 40%;
+        transform: translateX(-50%);
+        z-index: 2;
+        img {
+          width: 130%;
+          height: 100%;
+        }
+
+        &.headphones {
+          top: -42px;
+        }
+        &.speakers {
+          top: -27px;
+        }
+
+        &.earphones {
+          top: 0px;
+        }
+      }
+
+      .description-categorie {
+        position: relative;
+        z-index: 1;
+        cursor: pointer;
+        height: 204px;
+        background-color: $gray;
+        @media (max-width: 769px) {
+          height: 165px;
+        }
+        .link-categorie {
+          justify-content: center;
+          margin: 8px auto 0;
+          width: 58px;
+          .shop {
+            color: $gray-01;
+          }
+          img {
+            margin-left: 6px;
+          }
+        }
+        .cart-title {
+          text-transform: uppercase;
+          color: $black-01;
+          padding-top: 116px;
+          @media (max-width: 769px) {
+            padding-top: 88px;
+          }
+        }
+
+        &:hover {
+          .shop {
+            color: $brown;
+          }
+        }
+      }
+    }
+  }
+}

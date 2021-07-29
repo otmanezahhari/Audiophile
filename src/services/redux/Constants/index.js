@@ -1,0 +1,6 @@
+export const ActionTypes = {
+  GET_DATA_FROM_DB : "GET_DATA_FROM_DB",
+  ADD_TO_CART      : "ADD_TO_CART",
+  ROMOVE_ALL       : "REMOVE_ALL",
+  UPDATE_QUANTITY  : "UPDATE_QUANTITY",
+}
