@@ -215,12 +215,12 @@
       @media (max-width: 769px) {
         width: 689px;
         padding: 30px 27px 30px;
-        margin-bottom: 116px;
+        margin: 0px auto 116px;
       }
       @media (max-width: 368px) {
         width: 327px;
         padding: 24px 23px 30px;
-        margin-bottom: 32px;
+        margin-bottom: 0 auto 32px;
       }
       .cart-title {
         text-transform: uppercase;

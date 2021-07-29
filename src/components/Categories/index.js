@@ -4,6 +4,9 @@ import "./categories.scss";
 
 
 function Categories(props){
+  
+  
+  
   const ItemCategorie = () =>{
     const Items = [
       {
@@ -17,11 +20,18 @@ function Categories(props){
       },
   ]
 
+  const removeDisplayFromMTNavigation = (ev)=>{
+    console.log(ev.target.className)
+ 
+    document.querySelector('#nav-mobile').classList = "";
+  }
+
+
 
   return(
     Items.map((elem,index) => {
       return(
-        <Link key={index} to = {"/" + elem.name}  className="categorie-item" onClick={scrollToTop}>
+        <Link key={index} to = {"/" + elem.name}  className="categorie-item" onClick={scrollToTop, removeDisplayFromMTNavigation}>
             <div className={`box-img-categorie ${elem.name}`}>
               <img src={"/Audiophile/assets/shared/desktop/image-" + elem.name + ".png"} alt={elem.name}/>
             </div>

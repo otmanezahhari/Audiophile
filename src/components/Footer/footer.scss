@@ -38,6 +38,9 @@
         width: 100%;
         max-width: 429px;
       }
+      @media (max-width: 368px) {
+        height: auto;
+      }
       &.flex {
         @media (max-width: 368px) {
           display: block;
